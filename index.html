@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="css/style.css"><!-- our stylesheet -->
   </head>
   <body>
+    <nav class="navbar">
+      <a class="nav-item one" href="#"><i class="fas fa-home"></i> Home</a>
+      <a class="nav-item two" href="#"><i class="fas fa-paint-brush"></i> Credits</a>
+      <a class="nav-item three" href="#"><i class="fas fa-gamepad"></i> Beeg Yoshi</a>
+      <a class="nav-item four" href="#"><i class="fas fa-dice-four"></i> Smol Yoshi</a>
+      <a class="nav-item four" href="#"><i class="fas fa-camera"></i> More Pics...</a>
+      <a href="javascript:void(0);" class="nav-item trigram" onclick="navToggle()">&#9776;</a>
+    </nav>
     <section class="slideshow">
      <div class="slideshow-wrapper">
        <div class="slide fade">
@@ -44,15 +52,11 @@
      </div>
    </section>
    <main class="page-grid">
-     <!--Navigation Menu and its links -->
-     <nav class="navbar">
-       <a class="nav-item one" href="#"><i class="fas fa-theater-masks"></i></br>The Mask</a>
-       <a class="nav-item two" href="#"><i class="fas fa-paint-brush"></i></br>The Arts</a>
-       <a class="nav-item three" href="#"><i class="fas fa-gamepad"></i></br>Gameplay</a>
-       <a class="nav-item four" href="#"><i class="fas fa-dice-four"></i></br>Four...</a>
-     </nav>
    </main>
   <!-- closing script calls -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+       crossorigin="anonymous"></script>
   <script src="js/page.js"></script>
   </body>
 </html>

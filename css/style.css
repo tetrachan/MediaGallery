@@ -3,9 +3,10 @@
   --prime: #222;
   --text: #EEE;
   --rev-text: #4d4d4d;
-  --accent: #2E9CCA;
-  --accent-dk: #2EEECA;
+  --accent: #67374E;
+  --accent-dk:#422432;
   --bg: #4d4d4d;
+  --shadow-dk: #0d0d0d;
 }
 /*-- Document Styles --*/
 body { /*-- Sets body defaults --*/
@@ -14,6 +15,50 @@ body { /*-- Sets body defaults --*/
   color: var(--text);
   background-color: var(--prime);
 }
+
+.page-grid {
+  width: 85%;
+  margin: auto;
+  display: grid;
+  padding: 1em;
+  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.card {
+  background-color: var(--bg);
+  color: var(--text);
+  text-decoration: none;
+  padding: .5em;
+  transition: all .5s ease;
+  box-shadow: 1px 1px 4px rgba(255,255,255,0.3),
+              -1px 0px 4px rgba(255,255,255,0.3);
+}
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 3px 3px 24px rgba(255,255,255,0.3),
+              -3px 0px 24px rgba(255,255,255,0.3);
+}
+.thumb {
+  border-radius: 4px 4px 0 0;
+  padding-bottom: 56%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.card:nth-child(1) .thumb{background-image:url('https://picsum.photos/400/225?image=0')}
+.card:nth-child(2) .thumb{background-image:url('https://picsum.photos/400/225?image=10')}
+.card:nth-child(3) .thumb{background-image:url('https://picsum.photos/400/225?image=20')}
+.card:nth-child(4) .thumb{background-image:url('https://picsum.photos/400/225?image=30')}
+.card:nth-child(5) .thumb{background-image:url('https://picsum.photos/400/225?image=40')}
+.card:nth-child(6) .thumb{background-image:url('https://picsum.photos/400/225?image=50')}
+.card:nth-child(7) .thumb{background-image:url('https://picsum.photos/400/225?image=60')}
+.card:nth-child(8) .thumb{background-image:url('https://picsum.photos/400/225?image=70')}
+.card:nth-child(9) .thumb{background-image:url('https://picsum.photos/400/225?image=80')}
+.card:nth-child(10) .thumb{background-image:url('https://picsum.photos/400/225?image=90')}
+.card:nth-child(11) .thumb{background-image:url('https://picsum.photos/400/225?image=100')}
+.card:nth-child(12) .thumb{background-image:url('https://picsum.photos/400/225?image=59')}
 
 .navbar {
   margin-top: -.25rem; /*-- uses negative margin to pull menu to top --*/
@@ -165,4 +210,84 @@ a.nav-item:hover, a.nav-item:active {
 /* On smaller screens, hides slideshow */
 @media only screen and (max-width: 767px) {
   .slideshow {display: none;}
+}
+
+/*-- Modal Styles --*/
+/* The Modal (background) */
+.modal {
+   display: none;/*-- hidden by default --*/
+   position: fixed; /*-- doesn't move on the screen --*/
+   z-index: 420; /*-- sets higher than anything else so modal is in the very front --*/
+   left: 0; /*-- positions at zero pixels from the left --*/
+   top: 0; /*-- positions at zero pixels from the top --*/
+   width: 100%; /*-- fills the space --*/
+   height: 100%; /*-- fills the space --*/
+   overflow: auto; /*-- handles overflow as normal. --*/
+   background-color: rgba(10, 10, 10, .4); /*--slightly transparent--*/
+}
+.modal-content {
+   background-color: var(--bg);
+   color: var(--text);
+   margin: 1rem auto;
+   padding: 1em;
+   width: 92%;
+   border-radius: 4px;
+   animation: fadein .3s ease-in-out; /*-- sets animation properties: name, duration, easing --*/
+}
+@keyframes fadein {
+  from{transform:scale(.1);} /*-- modal grows from very small to full size--*/
+}
+.close {
+   color: var(--text);
+   font-size: 2.5em;
+   font-weight: bold;
+   position: absolute; /*-- always at the top right of the modal --*/
+   top: 5px;
+   right: 4.25%;
+   transition: all .2s ease-in;
+   text-shadow: 2px 2px 5px var(--shadow-dk),
+               -2px -2px 5px var(--shadow-dk),
+               2px -2px 5px var(--shadow-dk),
+               -2px 2px 5px var(--shadow-dk);
+}
+.close:hover,
+.close:focus {
+   color: var(--accent);
+   text-decoration: none;
+   cursor: pointer;
+}
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr; /*-- default modal grid (for mobile screens)--*/
+  grid-gap: 2em;
+}
+.eg-text {
+  align-self: center;
+}
+.eg-text h3 {
+  margin-top: 0;
+  padding-top: 0;
+}
+.modal-body img {
+  margin-bottom: 1.5em;
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 1280px) { /*-- better modal display on largest screens --*/
+  .modal-body {grid-template-columns: 7fr 5fr;}
+
+}
+
+/*-- Footer Styles --*/
+footer {
+  background-color: var(--prime);
+  padding: .25rem;
+  color: var(--rev-text);
+  text-align: center;
+}
+footer a {
+  color: var(--rev-text);
+}
+footer a:hover {
+  color: var(--rev-accent);
 }

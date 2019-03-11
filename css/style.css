@@ -47,18 +47,18 @@ body { /*-- Sets body defaults --*/
   background-position: center center;
   background-repeat: no-repeat;
 }
-.card:nth-child(1) .thumb{background-image:url('https://picsum.photos/400/225?image=0')}
-.card:nth-child(2) .thumb{background-image:url('https://picsum.photos/400/225?image=10')}
-.card:nth-child(3) .thumb{background-image:url('https://picsum.photos/400/225?image=20')}
-.card:nth-child(4) .thumb{background-image:url('https://picsum.photos/400/225?image=30')}
-.card:nth-child(5) .thumb{background-image:url('https://picsum.photos/400/225?image=40')}
-.card:nth-child(6) .thumb{background-image:url('https://picsum.photos/400/225?image=50')}
-.card:nth-child(7) .thumb{background-image:url('https://picsum.photos/400/225?image=60')}
-.card:nth-child(8) .thumb{background-image:url('https://picsum.photos/400/225?image=70')}
-.card:nth-child(9) .thumb{background-image:url('https://picsum.photos/400/225?image=80')}
-.card:nth-child(10) .thumb{background-image:url('https://picsum.photos/400/225?image=90')}
-.card:nth-child(11) .thumb{background-image:url('https://picsum.photos/400/225?image=100')}
-.card:nth-child(12) .thumb{background-image:url('https://picsum.photos/400/225?image=59')}
+.card:nth-child(1) .thumb{background-image:url('https://picsum.photos/400/225?image=79')}
+.card:nth-child(3) .thumb{background-image:url('https://picsum.photos/400/225?image=89')}
+.card:nth-child(5) .thumb{background-image:url('https://picsum.photos/400/225?image=329')}
+.card:nth-child(7) .thumb{background-image:url('https://picsum.photos/400/225?image=49')}
+.card:nth-child(9) .thumb{background-image:url('https://picsum.photos/400/225?image=59')}
+.card:nth-child(11) .thumb{background-image:url('https://picsum.photos/400/225?image=119')}
+.card:nth-child(13) .thumb{background-image:url('https://picsum.photos/400/225?image=290')}
+.card:nth-child(15) .thumb{background-image:url('https://picsum.photos/400/225?image=389')}
+.card:nth-child(17) .thumb{background-image:url('https://picsum.photos/400/225?image=459')}
+.card:nth-child(19) .thumb{background-image:url('https://picsum.photos/400/225?image=87')}
+.card:nth-child(21) .thumb{background-image:url('https://picsum.photos/400/225?image=65')}
+.card:nth-child(23) .thumb{background-image:url('https://picsum.photos/400/225?image=219')}
 
 .navbar {
   margin-top: -.25rem; /*-- uses negative margin to pull menu to top --*/

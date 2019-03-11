@@ -66,7 +66,7 @@ body { /*-- Sets body defaults --*/
   background-color: var(--prime);
   display: flex; /*-- creates a flex container --*/
   flex-direction: column; /*-- direction is for MOBILE screen sizes --*/
-  justify-content: space-around;
+  justify-content: stretch;
   align-items: stretch; /*-- sets menu items to fill space vertically --*/
   align-content: center; /*-- vertically aligns menu items to center --*/
   position: fixed; /*-- makes the navbar stay at the top, even when scrolling--*/
@@ -83,6 +83,7 @@ a.nav-item {
   text-decoration: none;
   font-size: 115%;
   color: var(--text);
+  width: 100%;
   background-color: var(--accent);
 }
 
